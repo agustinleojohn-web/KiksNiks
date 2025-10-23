@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>KiksNiks - Premium Athletic Footwear & Apparel | Shoes Online Store Philippines</title>
+  <meta name="description" content="Shop authentic athletic footwear, sneakers, and sports apparel at KiksNiks. Browse top brands like Nike, Adidas, Puma, and more. Free shipping over ₱3,000. Trusted online shoe store in the Philippines.">
+  <meta name="keywords" content="shoes, sneakers, athletic footwear, sports apparel, Nike, Adidas, running shoes, basketball shoes, Philippines, online shopping, KiksNiks">
+  <meta name="author" content="KiksNiks">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kiksniks.free.nf/">
+  <meta property="og:title" content="KiksNiks - Premium Athletic Footwear & Apparel">
+  <meta property="og:description" content="Shop authentic athletic footwear, sneakers, and sports apparel at KiksNiks. Browse top brands with free shipping over ₱3,000.">
+  <meta property="og:image" content="https://kiksniks.free.nf/og-image.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://kiksniks.free.nf/">
+  <meta property="twitter:title" content="KiksNiks - Premium Athletic Footwear & Apparel">
+  <meta property="twitter:description" content="Shop authentic athletic footwear, sneakers, and sports apparel at KiksNiks.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://kiksniks.free.nf/">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.ico">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/products.css">
+  <link rel="stylesheet" href="./css/modal.css">
+  
+  <!-- Structured Data - Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "KiksNiks",
+    "url": "https://kiksniks.free.nf",
+    "logo": "https://kiksniks.free.nf/img/logo/Official LOGO white.webp",
+    "description": "Premium athletic footwear and apparel online store in the Philippines",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tarlac",
+      "addressCountry": "PH"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+63-930-287-3442",
+      "contactType": "Customer Service",
+      "email": "info@kiksniks.com"
+    }
+  }
+  </script>
+</head>
+<body class="bg-white text-gray-900">
+  
+  <!-- Toast Container -->
+  <div id="toast-container" class="fixed top-4 right-4 z-[99999] space-y-2"></div>
+  
+  <!-- Header - NO TOP BANNER -->
+  <header id="header" class="fixed left-0 right-0 z-50 transition-all duration-300" style="top: 0; height: 64px; background: transparent; border-bottom: none;">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <button onclick="navigateTo('home')" class="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+            <img src="img/logo/Official LOGO white.webp" alt="KiksNiks" class="h-12 w-12 rounded-full object-cover">
+            <span class="text-2xl font-bold tracking-tight">KIKSNIKS</span>
+          </button>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-8">
+          <button onclick="navigateTo('home')" class="nav-link  tracking-wide transition-colors text-gray-600 hover:text-black" data-page="home">Home</button>
+          <button onclick="filterAndNavigate({isNew: true})" class="nav-link  tracking-wide transition-colors text-gray-600 hover:text-black" data-page="products">New Arrivals</button>
+          
+          <!-- Men Mega Menu -->
+          <div class="mega-menu-wrapper" data-gender="Men">
+            <button class="nav-link" onclick="filterProducts(null, 'Men', null)" data-page="products">Men</button>
+            <div class="mega-menu">
+              <div class="mega-menu-content">
+                <div class="mega-menu-column">
+                  <h3>Shoes</h3>
+                  <ul>
+                    <li><a href="#" onclick="filterProducts('Shoes', 'Men', 'Running'); return false;">Running</a></li>
+                    <li><a href="#" onclick="filterProducts('Shoes', 'Men', 'Basketball'); return false;">Basketball</a></li>
+                    <li><a href="#" onclick="filterProducts('Shoes', 'Men', 'Training'); return false;">Training</a></li>
+                    <li><a href="#" onclick="filterProducts('Shoes', 'Men', 'Casual'); return false;">Casual</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h3>Clothing</h3>
+                  <ul>
+                    <li><a href="#" onclick="filterProducts('Apparel', 'Men', 'Tops'); return false;">T-Shirts</a></li>
+                    <li><a href="#" onclick="filterProducts('Apparel', 'Men', 'Hoodies'); return false;">Hoodies</a></li>
+                    <li><a href="#" onclick="filterProducts('Apparel', 'Men', 'Shorts'); return false;">Shorts</a></li>
+                    <li><a href="#" onclick="filterProducts('Apparel', 'Men', 'Jackets'); return false;">Jackets</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h3>Accessories</h3>
+                  <ul>
+                    <li><a href="#" onclick="filterProducts('Accessories', 'Men', 'Bags'); return false;">Bags</a></li>
+                    <li><a href="#" onclick="filterProducts('Accessories', 'Men', 'Socks'); return false;">Socks</a></li>
+                    <li><a href="#" onclick="filterProducts('Accessories', 'Men', 'Caps'); return false;">Caps</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h3>Featured</h3>
+                  <ul>
+                    <li><a href="#" onclick="filterAndNavigate({gender: 'Men', isNew: true}); return false;">New Releases</a></li>
+                    <li><a href="#" onclick="filterAndNavigate({gender: 'Men', isBestSeller: true}); return false;">Best Sellers</a></li>
+                    <li><a href="#" onclick="filterAndNavigate({gender: 'Men', hasDiscount: true}); return false;">Sale</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Women Mega Menu -->
+          <div class="mega-menu-wrapper" data-gender="Women">
+            <button class="nav-link" onclick="filterProducts(null, 'Women', null)" data-page="products">Women</button>
+            <div class="mega-menu">
+              <div class="mega-menu-content">
+                <div class="mega-menu-column">
+                  <h3>Shoes</h3>
+                  <ul>
+                    <li><a href="#" onclick="filterProducts('Shoes', 'Women', 'Running'); return false;">Running</a></li>
+                    <li><a href="#" onclick="filterProducts('Shoes', 'Women', 'Training'); return false;">Training</a></li>
+                    <li><a href="#" onclick="filterProducts('Shoes', 'Women', 'Lifestyle'); return false;">Lifestyle</a></li>
+                    <li><a href="#" onclick="filterProducts('Shoes', 'Women', 'Casual'); return false;">Casual</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h3>Clothing</h3>
+                  <ul>
+                    <li><a href="#" onclick="filterProducts('Apparel', 'Women', 'Sports Bras'); return false;">Sports Bras</a></li>
+                    <li><a href="#" onclick="filterProducts('Apparel', 'Women', 'Tops'); return false;">Tops</a></li>
+                    <li><a href="#" onclick="filterProducts('Apparel', 'Women', 'Leggings'); return false;">Leggings</a></li>
+                    <li><a href="#" onclick="filterProducts('Apparel', 'Women', 'Jackets'); return false;">Jackets</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h3>Accessories</h3>
+                  <ul>
+                    <li><a href="#" onclick="filterProducts('Accessories', 'Women', 'Bags'); return false;">Bags</a></li>
+                    <li><a href="#" onclick="filterProducts('Accessories', 'Women', 'Socks'); return false;">Socks</a></li>
+                    <li><a href="#" onclick="filterProducts('Accessories', 'Women', 'Headwear'); return false;">Headwear</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h3>Featured</h3>
+                  <ul>
+                    <li><a href="#" onclick="filterAndNavigate({gender: 'Women', isNew: true}); return false;">New Releases</a></li>
+                    <li><a href="#" onclick="filterAndNavigate({gender: 'Women', isBestSeller: true}); return false;">Best Sellers</a></li>
+                    <li><a href="#" onclick="filterAndNavigate({gender: 'Women', hasDiscount: true}); return false;">Sale</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Kids Mega Menu -->
+          <div class="mega-menu-wrapper" data-gender="Kids">
+            <button class="nav-link" onclick="filterProducts(null, 'Kids', null)" data-page="products">Kids</button>
+            <div class="mega-menu">
+              <div class="mega-menu-content">
+                <div class="mega-menu-column">
+                  <h3>Shoes</h3>
+                  <ul>
+                    <li><a href="#" onclick="filterProducts('Shoes', 'Kids', 'Running'); return false;">Running</a></li>
+                    <li><a href="#" onclick="filterProducts('Shoes', 'Kids', 'Basketball'); return false;">Basketball</a></li>
+                    <li><a href="#" onclick="filterProducts('Shoes', 'Kids', 'Training'); return false;">Training</a></li>
+                    <li><a href="#" onclick="filterProducts('Shoes', 'Kids', 'Casual'); return false;">Casual</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h3>Clothing</h3>
+                  <ul>
+                    <li><a href="#" onclick="filterProducts('Apparel', 'Kids', 'Tops'); return false;">T-Shirts</a></li>
+                    <li><a href="#" onclick="filterProducts('Apparel', 'Kids', 'Hoodies'); return false;">Hoodies</a></li>
+                    <li><a href="#" onclick="filterProducts('Apparel', 'Kids', 'Shorts'); return false;">Shorts</a></li>
+                    <li><a href="#" onclick="filterProducts('Apparel', 'Kids', 'Jackets'); return false;">Jackets</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h3>Accessories</h3>
+                  <ul>
+                    <li><a href="#" onclick="filterProducts('Accessories', 'Kids', 'Bags'); return false;">Bags</a></li>
+                    <li><a href="#" onclick="filterProducts('Accessories', 'Kids', 'Socks'); return false;">Socks</a></li>
+                    <li><a href="#" onclick="filterProducts('Accessories', 'Kids', 'Caps'); return false;">Caps</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h3>Featured</h3>
+                  <ul>
+                    <li><a href="#" onclick="filterAndNavigate({gender: 'Kids', isNew: true}); return false;">New Releases</a></li>
+                    <li><a href="#" onclick="filterAndNavigate({gender: 'Kids', isBestSeller: true}); return false;">Best Sellers</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- ✅ NEW: Unisex Mega Menu -->
+          <div class="mega-menu-wrapper" data-gender="Unisex">
+            <button class="nav-link" onclick="filterProducts(null, 'Unisex', null)" data-page="products">Unisex</button>
+            <div class="mega-menu">
+              <div class="mega-menu-content">
+                <div class="mega-menu-column">
+                  <h3>Shoes</h3>
+                  <ul>
+                    <li><a href="#" onclick="filterProducts('Shoes', 'Unisex', 'Running'); return false;">Running</a></li>
+                    <li><a href="#" onclick="filterProducts('Shoes', 'Unisex', 'Training'); return false;">Training</a></li>
+                    <li><a href="#" onclick="filterProducts('Shoes', 'Unisex', 'Casual'); return false;">Casual</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h3>Clothing</h3>
+                  <ul>
+                    <li><a href="#" onclick="filterProducts('Apparel', 'Unisex', 'T-Shirts'); return false;">T-Shirts</a></li>
+                    <li><a href="#" onclick="filterProducts('Apparel', 'Unisex', 'Hoodies'); return false;">Hoodies</a></li>
+                    <li><a href="#" onclick="filterProducts('Apparel', 'Unisex', 'Jackets'); return false;">Jackets</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h3>Accessories</h3>
+                  <ul>
+                    <li><a href="#" onclick="filterProducts('Accessories', 'Unisex', 'Bags'); return false;">Bags</a></li>
+                    <li><a href="#" onclick="filterProducts('Accessories', 'Unisex', 'Caps'); return false;">Caps</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-column">
+                  <h3>Featured</h3>
+                  <ul>
+                    <li><a href="#" onclick="filterAndNavigate({gender: 'Unisex', isNew: true}); return false;">New Releases</a></li>
+                    <li><a href="#" onclick="filterAndNavigate({gender: 'Unisex', isBestSeller: true}); return false;">Best Sellers</a></li>
+                    <li><a href="#" onclick="filterAndNavigate({gender: 'Unisex', hasDiscount: true}); return false;">Sale</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <button onclick="navigateTo('contact')" class="nav-link  tracking-wide transition-colors text-gray-600 hover:text-black" data-page="contact">Contact</button>
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center space-x-4">
+          <!-- Shopping Bag ONLY -->
+          <button onclick="openCart()" class="p-2 rounded-full transition-colors relative shopping">
+            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            <span id="cart-count" class="absolute -top-1 -right-1 bg-black text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+          </button>
+
+          <!-- Mobile Menu -->
+          <button onclick="toggleMobileMenu()" class="ham lg:hidden p-2  rounded-full transition-colors">
+            <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- ✨ PROFESSIONAL MOBILE MENU OVERLAY ✨ -->
+  <div id="mobile-menu-overlay">
+    <div class="mobile-menu-header">
+      <div class="flex items-center space-x-3">
+        <img src="img/logo/Official LOGO white.webp" alt="KiksNiks" class="h-10 w-10 rounded-full object-cover">
+        <span class="text-xl font-bold text-white tracking-tight">KIKSNIKS</span>
+      </div>
+      <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+    </div>
+    
+    <div class="mobile-menu-content">
+      <nav class="mobile-menu-nav">
+        <button onclick="navigateTo('home'); toggleMobileMenu();" class="mobile-menu-item">Home</button>
+        <button onclick="filterAndNavigate({isNew: true}); toggleMobileMenu();" class="mobile-menu-item">New Arrivals</button>
+        <button onclick="filterProducts(null, 'Men', null); toggleMobileMenu();" class="mobile-menu-item">Men</button>
+        <button onclick="filterProducts(null, 'Women', null); toggleMobileMenu();" class="mobile-menu-item">Women</button>
+        <button onclick="filterProducts(null, 'Kids', null); toggleMobileMenu();" class="mobile-menu-item">Kids</button>
+        <button onclick="filterProducts(null, 'Unisex', null); toggleMobileMenu();" class="mobile-menu-item">Unisex</button>
+        <button onclick="navigateTo('contact'); toggleMobileMenu();" class="mobile-menu-item">Contact</button>
+      </nav>
+      
+      <div class="mobile-menu-footer">
+        <p>All items are guaranteed legit, authentic and original.</p>
+        <p class="text-xs">© <span id="mobile-footer-year"></span> KiksNiks. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Content will be dynamically loaded here -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white">
+    <!-- Newsletter Section -->
+    <div class="border-b border-gray-800">
+      <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="max-w-2xl mx-auto text-center">
+          <i data-lucide="mail" class="w-12 h-12 mx-auto mb-4"></i>
+          <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+          <p class="text-gray-400 mb-6">Subscribe to our newsletter for exclusive deals and new arrivals</p>
+          <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <input type="email" id="newsletter-email" placeholder="Enter your email" class="flex-1 px-6 py-3 rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-white" required>
+            <button type="submit" class="px-8 py-3 bg-black border border-white text-white rounded-lg hover:bg-[#1a1a1a] transition-colors font-medium whitespace-nowrap">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Footer Content -->
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <!-- Brand Column -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="img/logo/Official LOGO white.webp?w=100&h=100" alt="KiksNiks" class="h-12 w-12 rounded-full object-cover">
+            <span class="text-2xl font-bold tracking-tight">KIKSNIKS</span>
+          </div>
+          <p class="text-gray-400 mb-6 max-w-sm">Your premier destination for authentic athletic footwear and apparel. Quality, style, and performance in every product.</p>
+          <div class="flex items-center gap-4">
+            <a href="https://www.facebook.com/KiksNiks.2023" target="_blank" class="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
+              <i data-lucide="facebook" class="w-5 h-5"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
+              <i data-lucide="instagram" class="w-5 h-5"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
+              <i data-lucide="twitter" class="w-5 h-5"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" class="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
+              <i data-lucide="youtube" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Shop Links -->
+        <div>
+          <h3 class="font-bold text-lg mb-4">Shop</h3>
+          <ul class="space-y-3 text-gray-400">
+            <li><button onclick="filterAndNavigate({isNew: true});" data-page="products" class="hover:text-white transition-colors">New Arrivals</button></li>
+        <li><button onclick="filterProducts(null, 'Men', null)" data-page="products" class="hover:text-white transition-colors">Men</button></li>
+        <li><button onclick="filterProducts(null, 'Women', null)" data-page="products" class="hover:text-white transition-colors">Women</button></li>
+        <li><button onclick="filterProducts(null, 'Kids', null)" data-page="products" class="hover:text-white transition-colors">Kids</button></li>
+        <li><button onclick="filterProducts(null, 'Unisex', null)" data-page="products" class="hover:text-white transition-colors">Unisex</button></li>
+        
+           
+          
+          </ul>
+        </div>
+
+        <!-- Help Links -->
+        <div>
+          <h3 class="font-bold text-lg mb-4">Help</h3>
+          <ul class="space-y-3 text-gray-400">
+            <li><button onclick="navigateTo('contact')" class="hover:text-white transition-colors">Contact Us</button></li>
+            <li><button onclick="openInfoModal('shipping')" class="hover:text-white transition-colors">Shipping Info</button></li>
+            <li><button onclick="openInfoModal('returns')" class="hover:text-white transition-colors">Returns & Exchanges</button></li>
+            <li><button onclick="showSizeGuide()" class="hover:text-white transition-colors">Size Guide</button></li>
+            <li><button onclick="openInfoModal('faq')" class="hover:text-white transition-colors">FAQ</button></li>
+          </ul>
+        </div>
+
+        <!-- About Links -->
+        <div>
+          <h3 class="font-bold text-lg mb-4">About</h3>
+          <ul class="space-y-3 text-gray-400">
+            <li><button onclick="openInfoModal('story')" class="hover:text-white transition-colors">Our Story</button></li>
+            <li><button onclick="navigateTo('contact')" class="hover:text-white transition-colors">Contact Us</button></li>
+            <li><button onclick="openModal('privacy')" class="hover:text-white transition-colors">Privacy Policy</button></li>
+            <li><button onclick="openModal('terms')" class="hover:text-white transition-colors">Terms of Service</button></li>
+            <li><button onclick="openModal('accessibility')" class="hover:text-white transition-colors">Accessibility</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-800">
+      <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+          <p>&copy; <span id="footer-year">2024</span> KiksNiks. All rights reserved.</p>
+          <div class="flex items-center gap-6">
+            
+          <p>Powered by <strong> <a href="https://dishenyo.free.nf" target="_blank"> Leo John Agustin</a></strong> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div id="cart-sidebar" class="hidden fixed inset-0 z-50">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeCart()"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-white shadow-2xl flex flex-col">
+      <!-- Cart content will be rendered here -->
+    </div>
+  </div>
+
+  <!-- Mobile Filters Drawer -->
+  <div id="filters-drawer" class="hidden fixed inset-0 z-50">
+    <div class="absolute inset-0 bg-black/50" onclick="closeFiltersDrawer()"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-white shadow-xl overflow-y-auto filters-drawer-content">
+      <!-- Filters content will be rendered here -->
+    </div>
+  </div>
+
+  <!-- Product Modal Container -->
+  <div id="product-modal" class="hidden"></div>
+
+  <!-- Legal Modals Container -->
+  <div id="legal-modal" class="hidden"></div>
+
+  <!-- Scripts -->
+  <script src="./js/config.js"></script>
+  <script src="./js/utils.js"></script>
+  <script src="./js/googleSheets.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/products.js"></script>
+  <script src="./js/modal.js"></script>
+  <script src="./js/modal-info.js"></script>
+  <script src="./js/pages.js"></script>
+  <script src="./js/main.js"></script>
+  
+  <!-- Auto-update footer year -->
+  <script>
+    if (document.getElementById('footer-year')) {
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+    }
+  </script>
+  
+  <noscript>
+    <div style="padding: 20px; background: #fff3cd; border: 2px solid #ffc107; margin: 20px; border-radius: 5px;">
+      <strong>JavaScript Required:</strong> This website requires JavaScript to function properly.
+    </div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://kiksniks.free.nf/</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Products Page -->
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://kiksniks.free.nf/?page=contact</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Category Pages -->
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&gender=Men</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&gender=Women</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&gender=Kids</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&gender=Unisex</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Product Category Pages -->
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&category=Shoes</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&category=Apparel</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&category=Accessories</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Special Pages -->
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&filter=new</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&filter=sale</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&filter=bestseller</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Subcategory Pages - Men -->
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&gender=Men&category=Shoes&subcategory=Running</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&gender=Men&category=Shoes&subcategory=Basketball</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&gender=Men&category=Shoes&subcategory=Training</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&gender=Men&category=Shoes&subcategory=Casual</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Subcategory Pages - Women -->
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&gender=Women&category=Shoes&subcategory=Running</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&gender=Women&category=Shoes&subcategory=Training</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&gender=Women&category=Apparel&subcategory=Leggings</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://kiksniks.free.nf/?page=products&gender=Women&category=Apparel&subcategory=Sports%20Bras</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+</urlset>

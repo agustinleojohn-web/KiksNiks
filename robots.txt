@@ -1,0 +1,17 @@
+# KiksNiks - Robots.txt
+# https://kiksniks.free.nf/
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /css/
+Allow: /js/
+Allow: /img/
+
+Disallow: /google-apps-script-auto-setup.js
+
+# Sitemaps
+Sitemap: https://kiksniks.free.nf/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
